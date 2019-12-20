@@ -30,12 +30,19 @@
         //Limpiar el input
         tareaInput.value = "";
 
+        for (var i = 0; i <= lista.children.length - 1; i++) {
+            lista.children[i].addEventListener("click", function() {
+                this.parentNode.removeChild(this);
+            });
+        }
+
     };
     var comprobarInput = function() {
-
+        tareaInput.className = "";
+        tareaInput.setAttribute("placeholder", "Agrega tu tarea");
     };
     var eliminarTarea = function() {
-
+        this.parentNode.removeChild(this);
     };
 
 
